@@ -10,6 +10,9 @@ module.exports = {
     'src/**/*.js',
     '!src/index.js',
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
+  collectCoverage: process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true',
   coverageThreshold: {
     global: {
       lines: 0,
