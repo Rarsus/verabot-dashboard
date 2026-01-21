@@ -1,0 +1,37 @@
+/**
+ * Jest Configuration for VeraBot Dashboard
+ */
+
+module.exports = {
+  displayName: 'verabot-dashboard',
+  testEnvironment: 'node',
+  testMatch: ['**/tests/**/*.js'],
+  collectCoverageFrom: [
+    'src/**/*.js',
+    '!src/index.js',
+  ],
+  moduleNameMapper: {
+    '^verabot-utils/(.*)$': '<rootDir>/../verabot-utils/src/$1',
+    '^verabot-core/(.*)$': '<rootDir>/../verabot-core/src/$1',
+    '^verabot-commands/(.*)$': '<rootDir>/../verabot-commands/src/$1',
+  },
+  coverageDirectory: 'coverage',
+  coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
+  collectCoverage: process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true',
+  coverageThreshold: {
+    global: {
+      lines: 0,
+      functions: 0,
+      branches: 0,
+      statements: 0,
+    },
+  },
+  transform: {},
+  testTimeout: 10000,
+  setupFilesAfterEnv: [],
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
+  },
+};
