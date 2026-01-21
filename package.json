@@ -45,8 +45,11 @@
     "verabot-utils": "file:../verabot-utils"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
     "@jest/globals": "^30.2.0",
     "@types/jest": "^29.5.0",
+    "babel-jest": "^30.2.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
