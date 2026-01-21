@@ -10,6 +10,11 @@ module.exports = {
     'src/**/*.js',
     '!src/index.js',
   ],
+  moduleNameMapper: {
+    '^verabot-utils/(.*)$': '<rootDir>/../verabot-utils/src/$1',
+    '^verabot-core/(.*)$': '<rootDir>/../verabot-core/src/$1',
+    '^verabot-commands/(.*)$': '<rootDir>/../verabot-commands/src/$1',
+  },
   coverageDirectory: 'coverage',
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   collectCoverage: process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true',
