@@ -1,5 +1,5 @@
 {
-  "name": "verabot-dashboard",
+  "name": "@verabot/dashboard",
   "version": "1.0.0",
   "description": "Web dashboard and admin interface for Verabot - Discord bot management",
   "main": "src/index.js",
@@ -42,7 +42,7 @@
     "morgan": "^1.10.0",
     "passport": "^0.7.0",
     "passport-discord": "^0.1.4",
-    "verabot-utils": "file:../verabot-utils"
+    "@verabot/utils": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.6",
